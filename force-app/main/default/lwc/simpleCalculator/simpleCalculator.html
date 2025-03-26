@@ -1,0 +1,26 @@
+<template>
+  <lightning-card icon-name="utility:table" variant="base">
+    <div class="slds-var-m-around_medium">
+      <!-- Card Body  -->
+      <div class="slds-var-m-around_small">
+        <lightning-input type="number" name="num1" label="Enter first number" value={num1}
+          onchange={handleChange}></lightning-input>
+      </div>
+      <div class="slds-var-m-around_small">
+        <lightning-input type="number" name="num2" label="Enter second number" value={num2}
+          onchange={handleChange}></lightning-input>
+      </div>
+    </div>
+    <div>
+      <lightning-button-group class="slds-align_absolute-center">
+        <lightning-button label="Add" onclick={handleAdd}></lightning-button>
+        <lightning-button label="Subtract" onclick={handleSub}></lightning-button>
+        <lightning-button label="Mutiply" onclick={handleMulti}></lightning-button>
+        <lightning-button label="Divide" onclick={handleDiv}></lightning-button>
+      </lightning-button-group>
+    </div>
+    <div class="slds-var-m-around_medium">
+      Result is: {result}
+    </div>
+  </lightning-card>
+</template>
