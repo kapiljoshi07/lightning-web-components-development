@@ -1,0 +1,20 @@
+<template>
+  <lightning-card icon-name="standard:contact" variant="base">
+    <div>
+      <!-- Card Body  -->
+      <template for:each={contacts} for:item="contact">
+        <div
+          class="contact-tile"
+          key={contact.id}
+          onclick={contactHandler}
+          data-id={contact.id}
+        >
+          {contact.name}
+        </div>
+      </template>
+      <div lwc:if={selectedContact}>
+        <c-contact-list-child contact={selectedContact}></c-contact-list-child>
+      </div>
+    </div>
+  </lightning-card>
+</template>

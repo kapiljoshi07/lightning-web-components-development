@@ -1,0 +1,6 @@
+.contact-tile {
+  border: 1px solid #dddbda;
+  border-radius: 2rem;
+  padding: 8px;
+  cursor: pointer;
+}
